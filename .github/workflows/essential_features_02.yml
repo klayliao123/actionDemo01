@@ -1,0 +1,10 @@
+name: essential-feature-02
+on: [push]
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run build script
+      - run: ./github/scripts/build.sh
+      - run: bash
+      
