@@ -1,4 +1,4 @@
-name: learn-github-actions  
+name: essential-feature-01 
 on: [push]
 jobs:
   essential-feature-01:
