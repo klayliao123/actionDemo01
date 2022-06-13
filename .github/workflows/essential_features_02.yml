@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: run build script
-      - run: ./github/scripts/build.sh
-      - run: bash
+        run: ./github/scripts/build.sh
+        shell: bash
       
