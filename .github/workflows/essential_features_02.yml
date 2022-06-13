@@ -4,8 +4,11 @@ jobs:
   example-job:
     runs-on: ubuntu-latest
     steps:
+      # to download the repository files
       - uses: actions/checkout@v3
       - name: run build script
+        # need to run `git update-index --chmod=+x ./.github/scripts/build.sh`
+        # to make the file executable
         run: ./.github/scripts/build.sh
         shell: bash
       
