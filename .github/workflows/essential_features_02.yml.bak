@@ -7,7 +7,10 @@ jobs:
       # to download the repository files
       - uses: actions/checkout@v3
       - name: run build script
-        # need to run `git update-index --chmod=+x ./.github/scripts/build.sh`
+        # 
+        # need to run 
+        #   - chmod o+x ./.github/scripts/build.sh
+        #   - `git update-index --chmod=+x ./.github/scripts/build.sh`
         # to make the file executable
         run: ./.github/scripts/build.sh
         shell: bash

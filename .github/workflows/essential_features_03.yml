@@ -1,0 +1,17 @@
+name: essential-feature-03-share-files
+on: [push]
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - shell: bash
+        run: |
+          expr 1 + 1 > output.log
+      - name: upload output file
+        uses: actions/upload-artifact@v3
+        with:
+          name: output-log-file
+          path: output.log
+      
+      
