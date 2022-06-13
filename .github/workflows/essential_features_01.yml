@@ -1,0 +1,9 @@
+name: learn-github-actions  
+on: [push]
+jobs:
+  essential-feature-01:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm install -g bats
+      - run: bats -v
+      
