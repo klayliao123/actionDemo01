@@ -15,7 +15,7 @@ jobs:
           path: output.log
   job2:
     # run after job1
-    needs: upload output file
+    needs: output-log-file
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
