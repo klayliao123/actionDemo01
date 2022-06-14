@@ -1,0 +1,11 @@
+name: context-01
+on: [push]
+env:
+  continue: true
+  time: 3
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ toJSON(github) }}
+      
