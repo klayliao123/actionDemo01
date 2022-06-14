@@ -1,7 +1,21 @@
 name: essential-feature-04-download-file
 on: [push]
 jobs:
-  example-job:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - shell: bash
+        run: |
+          expr 1 + 1 > output.log
+      - name: upload output file
+        uses: actions/upload-artifact@v3
+        with:
+          name: output-log-file
+          path: output.log
+  job2:
+    # run after job1
+    needs: job1
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -9,6 +23,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: output-log-file
+                output-log-file
       - run: ls ./
       
       
