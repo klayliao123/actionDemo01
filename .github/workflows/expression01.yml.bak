@@ -15,5 +15,6 @@ jobs:
     strategy:
       matrix: ${{ fromJSON(needs.job1.outputs.matrix) }}
     steps:
+      # what the fuck is `build`? cannot run this command.
       - run: build
       
