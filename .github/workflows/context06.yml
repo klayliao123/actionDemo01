@@ -8,7 +8,7 @@ jobs:
         image: postgres
         env:
           POSTGRES_PASSWORD: postgres
-        options: --health-cm pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
         ports:
           # maps TCP port 5432 in the service container to a randomly chosen available port on the host
           - 5432
