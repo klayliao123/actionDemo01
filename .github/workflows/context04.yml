@@ -1,0 +1,17 @@
+name: Run CI
+on: [push, pull_request]
+
+jobs:
+  normal_ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: run normal CI
+        run: echo 'run normal test'
+  pull_request_ci:
+    runs-on: ubuntu-latest
+    if: ${{ github.event == 'pull_request' }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run PR CI
+        run: echo 'run additional pr test'
