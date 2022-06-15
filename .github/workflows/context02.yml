@@ -10,4 +10,4 @@ jobs:
     if: ${{ github.ref != 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
-      - run: echo "run on other branch"
+      - run: echo "run on other branch - $GITHUB_REF"
