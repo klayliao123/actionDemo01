@@ -14,5 +14,5 @@ jobs:
           - 5432
     steps:
       - uses: actions/checkout@v3
-      - run: pg_isready -h localhost -p ${{ job.services.postgres.posts[5432] }}
+      - run: pg_isready -h localhost -p ${{ job.services.postgres.ports[5432] }}
       - run: echo 'run-tests'
