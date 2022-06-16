@@ -20,5 +20,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: echo " build ${{needs.build.outputs.build_id}}  "
-    
+  debug:
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    if: ${{ failure }}
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo 'debug'  
   
