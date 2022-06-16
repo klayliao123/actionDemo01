@@ -1,0 +1,16 @@
+name: build and deploy
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      build_id: ${{ steps.build_step.outputs.build_id }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        id: build_step
+        run: |
+          echo 'build'
+          echo "::set-output name=build_id::$BUILD_ID"
+    
