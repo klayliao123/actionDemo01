@@ -3,7 +3,7 @@ ON:
   pull_request:
     branches:
       - master
-      - '*/test''
+      - '*/test'
 
 jobs:
   my_test:
