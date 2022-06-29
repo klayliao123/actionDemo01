@@ -7,5 +7,6 @@ ON:
 
 jobs:
   my_test:
+    runs-on: ubuntu-latest
     step:
       run: echo ${{ fromJSON(github) }}
