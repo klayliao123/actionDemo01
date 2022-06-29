@@ -2,7 +2,7 @@ name: test
 ON:
   pull_request:
     branches:
-      - master
+      - 'master'
       - '*/test'
 
 jobs:
