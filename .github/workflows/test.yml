@@ -13,4 +13,4 @@ jobs:
   my_test:
     runs-on: ubuntu-latest
     steps:
-      run: echo ${{ fromJSON(github) }}
+      - run: echo ${{ fromJSON(github) }}
