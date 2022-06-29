@@ -1,0 +1,11 @@
+name: test
+ON:
+  pull_request:
+    branches:
+      - master
+      - **/test
+
+jobs:
+  my_test:
+    step:
+      run: echo ${{ fromJSON(github) }}
