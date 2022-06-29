@@ -1,0 +1,21 @@
+name: Example using event type  
+on:
+  issues:
+    types:
+      - closed
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  state_event_type:
+    runs-on: ubuntu-latest
+    steps:
+    - name: if_issue
+      if: github.event.issue
+      run: |
+        echo an issue was closed
+    - name: if_pr
+      if: github.event.pull_request
+      run: |
+        echo a pull request was closed
