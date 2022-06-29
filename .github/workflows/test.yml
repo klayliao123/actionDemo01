@@ -4,6 +4,10 @@ ON:
     branches:
       - 'master'
       - '*/test'
+  push:
+    branches:
+      - 'master'
+      - '*/test'
 
 jobs:
   my_test:
