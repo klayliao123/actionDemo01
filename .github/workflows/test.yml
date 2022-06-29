@@ -1,6 +1,13 @@
 name: test
-ON:
-  pull_request
+on:
+  pull_request:
+    branches:
+      - 'master'
+      - '*/test'
+  push:
+    branches:
+      - 'master'
+      - '*/test'
 
 jobs:
   my_test:
